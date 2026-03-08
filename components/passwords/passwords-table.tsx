@@ -79,7 +79,6 @@ export function PasswordsTable({
 
   return (
     <div className="flex flex-col gap-4">
-      {/* Filters */}
       <div className="flex gap-3 items-center">
         <Input
           placeholder="Buscar por servicio o usuario..."
@@ -108,7 +107,6 @@ export function PasswordsTable({
         </Select>
       </div>
 
-      {/* Table */}
       <Table
         aria-label="Tabla de contraseñas"
         bottomContent={
@@ -163,6 +161,7 @@ export function PasswordsTable({
                     isIconOnly
                     size="sm"
                     variant="light"
+                    color="warning"
                     onPress={() => onEdit(record)}
                     aria-label="Editar"
                   >

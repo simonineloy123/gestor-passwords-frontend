@@ -39,7 +39,6 @@ export function Sidebar() {
 
   return (
     <aside className="flex flex-col w-64 h-screen bg-content1 border-r border-divider px-4 py-6 fixed left-0 top-0">
-      {/* Logo */}
       <div className="flex items-center gap-2 px-2 mb-8">
         <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -49,7 +48,6 @@ export function Sidebar() {
         <span className="font-bold text-lg">PassVault</span>
       </div>
 
-      {/* Nav Items */}
       <nav className="flex flex-col gap-1 flex-1">
         {navItems.map((item) => (
           <Button
@@ -65,7 +63,6 @@ export function Sidebar() {
         ))}
       </nav>
 
-      {/* Bottom actions */}
       <div className="flex flex-col gap-2">
         <div className="flex items-center justify-between px-2">
           <span className="text-sm text-default-500">Tema</span>

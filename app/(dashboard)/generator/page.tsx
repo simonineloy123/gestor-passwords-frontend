@@ -88,8 +88,7 @@ export default function GeneratorPage() {
   };
 
   return (
-    <div className="flex flex-col gap-6 max-w-xl">
-      {/* Header */}
+    <div className="flex flex-col gap-6 max-w-xl mx-auto w-full">
       <div>
         <h1 className="text-2xl font-bold">Generador de Contraseñas</h1>
         <p className="text-default-500 text-sm mt-1">
@@ -102,7 +101,6 @@ export default function GeneratorPage() {
           <h2 className="text-base font-semibold">Contraseña generada</h2>
         </CardHeader>
         <CardBody className="flex flex-col gap-4">
-          {/* Password output */}
           <div className="flex gap-2">
             <Input
               value={password}
@@ -124,7 +122,6 @@ export default function GeneratorPage() {
             </Button>
           </div>
 
-          {/* Strength indicator */}
           {strength && (
             <div className="flex flex-col gap-1">
               <div className="flex justify-between text-xs text-default-500">
@@ -144,13 +141,11 @@ export default function GeneratorPage() {
         </CardBody>
       </Card>
 
-      {/* Options */}
       <Card>
         <CardHeader className="pb-0">
           <h2 className="text-base font-semibold">Opciones</h2>
         </CardHeader>
         <CardBody className="flex flex-col gap-5">
-          {/* Length */}
           <div className="flex flex-col gap-2">
             <div className="flex justify-between">
               <span className="text-sm">Longitud</span>
@@ -172,7 +167,6 @@ export default function GeneratorPage() {
 
           <Divider />
 
-          {/* Character types */}
           <div className="flex flex-col gap-3">
             <span className="text-sm text-default-500">Tipos de caracteres</span>
 
@@ -231,7 +225,6 @@ export default function GeneratorPage() {
         </CardBody>
       </Card>
 
-      {/* Generate button */}
       <Button
         color="primary"
         size="lg"

@@ -97,7 +97,6 @@ export default function PasswordsPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      {/* Header */}
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold">Mis Contraseñas</h1>
@@ -118,7 +117,6 @@ export default function PasswordsPage() {
         </Button>
       </div>
 
-      {/* Table */}
       <PasswordsTable
         records={records}
         onEdit={handleEdit}
@@ -126,7 +124,6 @@ export default function PasswordsPage() {
         isLoading={isLoading}
       />
 
-      {/* Modals */}
       <PasswordModal
         isOpen={isPasswordModalOpen}
         onClose={() => setIsPasswordModalOpen(false)}

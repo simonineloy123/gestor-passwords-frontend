@@ -11,9 +11,11 @@ export const getUser = (): User | null => {
   return user ? JSON.parse(user) : null;
 };
 
-export const setAuth = (token: string, user: User): void => {
+export const setAuth = (token: string, user: User | null): void => {
   localStorage.setItem("token", token);
-  localStorage.setItem("user", JSON.stringify(user));
+  if (user) {
+    localStorage.setItem("user", JSON.stringify(user));
+  }
 };
 
 export const clearAuth = (): void => {
