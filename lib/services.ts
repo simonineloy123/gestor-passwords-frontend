@@ -1,7 +1,6 @@
 import api from "./api";
 import { AuthResponse, PasswordRecord, RegisterResponse } from "@/types";
 
-// ── Auth ──────────────────────────────────────────────────────────────────────
 
 export const authService = {
   login: async (email: string, password: string): Promise<AuthResponse> => {
@@ -20,7 +19,6 @@ export const authService = {
   },
 };
 
-// ── Passwords ─────────────────────────────────────────────────────────────────
 
 export const passwordService = {
   getAll: async (): Promise<PasswordRecord[]> => {

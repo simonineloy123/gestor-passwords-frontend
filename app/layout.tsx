@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import { Toaster } from "sonner";
 import { AppToaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -10,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "PassVault — Gestor de Contraseñas",
   description: "Administrá tus contraseñas de forma segura",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
