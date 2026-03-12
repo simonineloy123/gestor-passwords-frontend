@@ -28,10 +28,19 @@ export function DeleteModal({
 }: DeleteModalProps) {
   return (
     <Modal isOpen={isOpen} onClose={onClose} size="sm" placement="center">
-      <ModalContent>
+      <ModalContent
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            onConfirm();
+          }
+        }}
+      >
         <ModalHeader className="flex flex-col gap-0.5 pb-0">
           <span className="text-base font-semibold">Eliminar contraseña</span>
-          <span className="text-xs text-default-400 font-normal">Esta acción no se puede deshacer</span>
+          <span className="text-xs text-default-400 font-normal">
+            Esta acción no se puede deshacer
+          </span>
         </ModalHeader>
         <Divider className="mt-3 opacity-50" />
         <ModalBody className="py-4">

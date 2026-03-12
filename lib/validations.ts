@@ -33,10 +33,12 @@ export const passwordRecordSchema = z.object({
     .min(1, "El usuario es requerido"),
   password: z
     .string()
-    .min(6, "La contraseña debe tener al menos 6 caracteres"),
+    .min(1, "La contraseña es requerida"),
   category: z
     .string()
     .min(1, "La categoría es requerida"),
+
+  googleLogin: z.boolean().default(false),
 });
 
 export type LoginInput = z.infer<typeof loginSchema>;

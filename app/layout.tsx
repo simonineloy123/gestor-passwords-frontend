@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { AppToaster } from "@/components/ui/toaster";
+import { WakeUpBackend } from "@/components/ui/wake-up-backend";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +25,7 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <body className={inter.className}>
         <Providers>
+          <WakeUpBackend />
           {children}
           <AppToaster />
         </Providers>
